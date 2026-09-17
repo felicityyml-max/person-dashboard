@@ -26,15 +26,18 @@ npm run preview  # 本地预览构建产物
 | 阅读管理 | 书单、阅读进度与起止时间 |
 | 笔记管理 | 自由画布笔记卡片：按住标题栏拖动位置、右下角调整大小、字数统计、搜索、置顶与一键整理排列 |
 
-## 在线访问（GitHub Pages）
+## 换一台电脑使用
 
-仓库已内置 `.github/workflows/deploy-pages.yml`：推送到 `main` 分支后自动构建并发布到 GitHub Pages。
-
-开启方式：仓库 **Settings → Pages → Build and deployment → Source** 选择 **GitHub Actions**。发布后访问地址为：
-
+```bash
+git clone https://github.com/felicityyml-max/person-dashboard.git
+cd person-dashboard
+npm install
+npm run dev
 ```
-https://felicityyml-max.github.io/person-dashboard/
-```
+
+打开 `http://127.0.0.1:5173/` 即可；后续更新用 `git pull` 拉取。
+
+> 说明：仓库内置 `.github/workflows/ci.yml`，每次推送会自动做类型检查 + 构建，保证代码可运行。若要把页面直接挂到公网（GitHub Pages），需要仓库为 public 且套餐支持 Pages，届时在 **Settings → Pages → Source** 选择 **GitHub Actions** 并新增部署流程即可。
 
 ## 数据存储
 
